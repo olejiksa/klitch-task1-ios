@@ -11,6 +11,9 @@ import UIKit
 
 final class MainViewController: UIViewController {
 
+	@IBOutlet private weak var searchButton: LoadingButton!
+
+	private var firestore: Firestore?
 	private var user: User? { Auth.auth().currentUser }
 
 	override func viewDidLoad() {
@@ -50,26 +53,50 @@ final class MainViewController: UIViewController {
 		navigationController?.pushViewController(vc, animated: true)
 	}
 
-	@IBAction private func didSuggestHelp(_ sender: UIButton) {
-		let klitchType = KlitchType(number: sender.tag)
-		let klitches: [KlitchModel] = [.init(getHelp: "Нам нужны люди настоящего писательского мастерства",
-											 giveHelp: "Станешь частью большой команды",
-											 type: klitchType),
-									   .init(getHelp: "Я маломобилен",
-											 giveHelp: "Удовлетворенность от выполненного дела",
-											 type: klitchType),
-									   .init(getHelp: "Нам нужны в команду разработчики",
-											 giveHelp: "Станешь частью большой команды",
-											 type: klitchType),
-									   .init(getHelp: "Ищу соседку",
-											 giveHelp: "nil",
-											 type: klitchType)]
-		let vc = KlitchDetailViewController(klitches: klitches)
-		navigationController?.pushViewController(vc, animated: true)
+	@IBAction private func didSuggestHelp() {
+		searchButton.showLoading()
+
+		firestore?.collection("klitches").getDocuments() { [weak self] querySnapshot, err in
+			guard let self = self else { return }
+
+			self.searchButton.hideLoading()
+
+			if let err = err {
+				let alert = AlertHelper.error(err.localizedDescription)
+				self.present(alert, animated: true)
+			} else {
+				var klitches: [KlitchModel] = []
+				for document in querySnapshot?.documents ?? [] {
+					let data = document.data()
+					let name = data["name"] as? String ?? ""
+					let description = data["description"] as? String ?? ""
+					let getHelp = data["getHelp"] as? String ?? ""
+					let giveHelp = data["giveHelp"] as? String ?? ""
+					let categories = data["categories"] as? String ?? ""
+					let type = KlitchType(rawValue: data["type"] as? String ?? "") ?? .community
+					klitches.append(.init(name: name,
+										  categories: categories,
+										  description: description,
+										  getHelp: getHelp,
+										  giveHelp: giveHelp,
+										  type: type))
+				}
+
+				if !klitches.isEmpty {
+					let vc = KlitchDetailViewController(klitches: klitches)
+					self.navigationController?.pushViewController(vc, animated: true)
+				} else {
+					let alert = AlertHelper.error("Пока нет клитчей в базе данных. Попробуйте создать первый!")
+					self.present(alert, animated: true)
+				}
+			}
+		}
 	}
 
 	private func setupData() {
 		title = "Меню"
+		
+		firestore = Firestore.firestore()
 	}
 
 	private func setupNavigationBarButtons() {

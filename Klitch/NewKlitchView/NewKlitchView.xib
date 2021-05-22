@@ -66,41 +66,59 @@
                                     <state key="normal" image="star.fill" catalog="system">
                                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </state>
+                                    <connections>
+                                        <action selector="didCategoryTap:" destination="-1" eventType="touchUpInside" id="ZU8-jH-64t"/>
+                                    </connections>
                                 </button>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="upL-hi-pC7">
+                                <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="upL-hi-pC7">
                                     <rect key="frame" x="65.5" y="0.0" width="46" height="24"/>
                                     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <state key="normal" image="target" catalog="system">
                                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </state>
+                                    <connections>
+                                        <action selector="didCategoryTap:" destination="-1" eventType="touchUpInside" id="eRb-j7-Rr8"/>
+                                    </connections>
                                 </button>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XZv-qZ-sBD">
+                                <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XZv-qZ-sBD">
                                     <rect key="frame" x="131.5" y="0.0" width="45.5" height="24"/>
                                     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <state key="normal" image="helm" catalog="system">
                                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </state>
+                                    <connections>
+                                        <action selector="didCategoryTap:" destination="-1" eventType="touchUpInside" id="V5A-v0-dyn"/>
+                                    </connections>
                                 </button>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WGx-I0-Pi1">
+                                <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WGx-I0-Pi1">
                                     <rect key="frame" x="197" y="0.0" width="45.5" height="24"/>
                                     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <state key="normal" image="lasso.sparkles" catalog="system">
                                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </state>
+                                    <connections>
+                                        <action selector="didCategoryTap:" destination="-1" eventType="touchUpInside" id="WIU-dl-w2n"/>
+                                    </connections>
                                 </button>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zvZ-J8-7nb">
+                                <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zvZ-J8-7nb">
                                     <rect key="frame" x="262.5" y="0.0" width="46" height="24"/>
                                     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <state key="normal" image="gauge" catalog="system">
                                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </state>
+                                    <connections>
+                                        <action selector="didCategoryTap:" destination="-1" eventType="touchUpInside" id="zj2-Jl-frR"/>
+                                    </connections>
                                 </button>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cku-bl-2dU">
+                                <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cku-bl-2dU">
                                     <rect key="frame" x="328.5" y="0.0" width="45.5" height="24"/>
                                     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <state key="normal" image="arrow.branch" catalog="system">
                                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </state>
+                                    <connections>
+                                        <action selector="didCategoryTap:" destination="-1" eventType="touchUpInside" id="Ywj-vH-LvW"/>
+                                    </connections>
                                 </button>
                             </subviews>
                         </stackView>

@@ -18,6 +18,12 @@
                 <outlet property="nameLabel" destination="78s-XW-fwU" id="EA5-WE-5Vt"/>
                 <outlet property="placeholderView" destination="BEK-1o-u7M" id="4cV-LK-JZ6"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outletCollection property="buttons" destination="Cku-bl-2dU" collectionClass="NSMutableArray" id="lcq-cK-1YJ"/>
+                <outletCollection property="buttons" destination="zvZ-J8-7nb" collectionClass="NSMutableArray" id="Rl3-Rx-PxW"/>
+                <outletCollection property="buttons" destination="WGx-I0-Pi1" collectionClass="NSMutableArray" id="bXv-tH-QNw"/>
+                <outletCollection property="buttons" destination="XZv-qZ-sBD" collectionClass="NSMutableArray" id="9cp-Uq-zpc"/>
+                <outletCollection property="buttons" destination="upL-hi-pC7" collectionClass="NSMutableArray" id="uel-9O-Gvl"/>
+                <outletCollection property="buttons" destination="sGg-2J-saf" collectionClass="NSMutableArray" id="lUR-dI-3fS"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>

@@ -19,6 +19,8 @@ final class KlitchDetailViewController: UIViewController {
 	@IBOutlet private weak var getHelpContentLabel: UILabel!
 	@IBOutlet private weak var giveHelpContentLabel: UILabel!
 
+	@IBOutlet var buttons: [UIButton]!
+
 	private let klitches: [KlitchModel]
 	private var index = 0
 
@@ -57,7 +59,7 @@ final class KlitchDetailViewController: UIViewController {
     }
 
 	@objc private func didArrowUpTap() {
-		guard index > 1 else { return }
+		guard index > 0 else { return }
 		index -= 1
 
 		setData()
@@ -91,22 +93,27 @@ final class KlitchDetailViewController: UIViewController {
 			message = "Вы можете стать частью команды!"
 		}
 
-		if klitch.type == .neighbor {
-			descriptionLabel.isHidden = true
-		} else {
-			descriptionLabel.isHidden = false
-		}
-
 		let alert = AlertHelper.match(message, connectHandler: didConnect)
 		present(alert, animated: true)
 	}
 
 	private func setData() {
 		guard index < klitches.count else { return }
+		
 		let klitch = klitches[index]
-		// nameLabel.text = klitch.profile.name
-		// descriptionLabel.text = klitch.profile.description
+
+		nameLabel.text = klitch.name
+		descriptionLabel.text = klitch.description
 		getHelpContentLabel.text = klitch.getHelp
 		giveHelpContentLabel.text = klitch.giveHelp
+		descriptionLabel.isHidden = klitch.type == .neighbor || descriptionLabel.text?.isEmpty == true
+		giveHelpLabel.isHidden = giveHelpContentLabel.text?.isEmpty == true
+		giveHelpContentLabel.isHidden = giveHelpContentLabel.text?.isEmpty == true
+
+		for letter in klitch.categories {
+			let digit = Int(String(letter)) ?? -1
+			guard digit >= 0 else { continue }
+			buttons[digit].tintColor = .orange
+		}
 	}
 }

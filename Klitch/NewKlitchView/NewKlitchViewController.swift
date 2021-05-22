@@ -22,6 +22,8 @@ final class NewKlitchViewController: UIViewController {
 	private let klitchType: KlitchType
 	private var firestore: Firestore?
 
+	private var selectedCategoryIndexes: [Int] = []
+
 	private var user: User? { Auth.auth().currentUser }
 
 	init(klitchType: KlitchType) {
@@ -81,9 +83,16 @@ final class NewKlitchViewController: UIViewController {
 	@IBAction private func didCreateKlitch() {
 		guard let getHelp = getHelpField.text, let giveHelp = giveHelpField.text else { return }
 
+		var categories = ""
+		for i in selectedCategoryIndexes {
+			categories.append(String(i))
+		}
+
 		_ = firestore?.collection("klitches").addDocument(data: [
+			"name": user?.displayName ?? "",
 			"getHelp": getHelp,
 			"giveHelp": giveHelp,
+			"categories": categories,
 			"type": klitchType.rawValue
 		])
 
@@ -92,6 +101,16 @@ final class NewKlitchViewController: UIViewController {
 		}
 		
 		present(alert, animated: true)
+	}
+
+	@IBAction private func didCategoryTap(_ sender: UIButton) {
+		if let index = selectedCategoryIndexes.first(where: { $0 == sender.tag }) {
+			selectedCategoryIndexes.remove(at: index)
+			sender.tintColor = .white
+		} else {
+			selectedCategoryIndexes.append(sender.tag)
+			sender.tintColor = .orange
+		}
 	}
 }
 

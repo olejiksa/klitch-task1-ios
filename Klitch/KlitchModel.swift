@@ -7,6 +7,9 @@
 //
 
 struct KlitchModel: Codable {
+	let name: String
+	let categories: String
+	let description: String
 	let getHelp: String
 	let giveHelp: String?
 	let type: KlitchType
