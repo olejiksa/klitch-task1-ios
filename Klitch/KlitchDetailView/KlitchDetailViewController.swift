@@ -91,6 +91,12 @@ final class KlitchDetailViewController: UIViewController {
 			message = "Вы можете стать частью команды!"
 		}
 
+		if klitch.type == .neighbor {
+			descriptionLabel.isHidden = true
+		} else {
+			descriptionLabel.isHidden = false
+		}
+
 		let alert = AlertHelper.match(message, connectHandler: didConnect)
 		present(alert, animated: true)
 	}
@@ -98,8 +104,8 @@ final class KlitchDetailViewController: UIViewController {
 	private func setData() {
 		guard index < klitches.count else { return }
 		let klitch = klitches[index]
-		nameLabel.text = klitch.name
-		descriptionLabel.text = klitch.description
+		// nameLabel.text = klitch.profile.name
+		// descriptionLabel.text = klitch.profile.description
 		getHelpContentLabel.text = klitch.getHelp
 		giveHelpContentLabel.text = klitch.giveHelp
 	}

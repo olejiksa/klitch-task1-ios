@@ -50,7 +50,7 @@ final class SignUpViewController: UIViewController {
 				let alert = AlertHelper.error(error.localizedDescription)
 				self.present(alert, animated: true)
 			} else if let authResult = authResult {
-				let vc = MainViewController(user: authResult.user)
+				let vc = MainViewController()
 				self.clearBackStack(with: vc)
 				let keyedUser = try? NSKeyedArchiver.archivedData(withRootObject: authResult.user, requiringSecureCoding: false)
 				UserDefaults.standard.setValue(keyedUser, forKey: "user")

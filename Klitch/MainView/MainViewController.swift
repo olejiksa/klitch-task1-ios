@@ -11,16 +11,7 @@ import UIKit
 
 final class MainViewController: UIViewController {
 
-	private let user: User
-
-	init(user: User) {
-		self.user = user
-		super.init(nibName: nil, bundle: nil)
-	}
-
-	required init?(coder: NSCoder) {
-		fatalError("init(coder:) has not been implemented")
-	}
+	private var user: User? { Auth.auth().currentUser }
 
 	override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,10 +23,11 @@ final class MainViewController: UIViewController {
 	@objc private func didLogOutTap() {
 		let vc = AuthViewController()
 		clearBackStack(with: vc)
+		try? Auth.auth().signOut()
 	}
 
 	@objc private func didProfileTap() {
-		let vc = ProfileViewController(user: user)
+		let vc = ProfileViewController()
 		navigationController?.pushViewController(vc, animated: true)
 	}
 
@@ -53,31 +45,23 @@ final class MainViewController: UIViewController {
 	}
 
 	@IBAction private func didAsk(_ sender: UIButton) {
-		let klitchType = KlitchType(rawValue: sender.tag)
-		let vc = klitchType.map(NewKlitchViewController.init)
-		vc.map { navigationController?.pushViewController($0, animated: true) }
+		let klitchType = KlitchType(number: sender.tag)
+		let vc = NewKlitchViewController(klitchType: klitchType)
+		navigationController?.pushViewController(vc, animated: true)
 	}
 
 	@IBAction private func didSuggestHelp(_ sender: UIButton) {
-		let klitchType = KlitchType(rawValue: sender.tag) ?? .community
-		let klitches: [KlitchModel] = [.init(name: "Интернет-журнал",
-											 description: "Университетский интернет-журнал",
-											 getHelp: "Нам нужны люди настоящего писательского мастерства",
+		let klitchType = KlitchType(number: sender.tag)
+		let klitches: [KlitchModel] = [.init(getHelp: "Нам нужны люди настоящего писательского мастерства",
 											 giveHelp: "Станешь частью большой команды",
 											 type: klitchType),
-									   .init(name: "Помощь с покупками",
-											 description: "Человек с ограниченными возможностями",
-											 getHelp: "Я маломобилен",
+									   .init(getHelp: "Я маломобилен",
 											 giveHelp: "Удовлетворенность от выполненного дела",
 											 type: klitchType),
-									   .init(name: "Проект разработки Telegram-бота",
-											 description: "Университетский интернет-журнал",
-											 getHelp: "Нам нужны в команду разработчики",
+									   .init(getHelp: "Нам нужны в команду разработчики",
 											 giveHelp: "Станешь частью большой команды",
 											 type: klitchType),
-									   .init(name: "Лиза, 24",
-											 description: "Магистрантка 2 курса",
-											 getHelp: "Ищу соседку",
+									   .init(getHelp: "Ищу соседку",
 											 giveHelp: "nil",
 											 type: klitchType)]
 		let vc = KlitchDetailViewController(klitches: klitches)

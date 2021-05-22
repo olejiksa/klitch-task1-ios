@@ -30,8 +30,8 @@ final class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 		let vc: UIViewController
 		let keyedUser = UserDefaults.standard.value(forKey: "user") as? Data
 		let user = keyedUser.map { try? NSKeyedUnarchiver.unarchivedObject(ofClasses: [User.self], from: $0) } as? User
-		if let user = user {
-			vc = MainViewController(user: user)
+		if user != nil {
+			vc = MainViewController()
 		} else {
 			vc = AuthViewController()
 		}

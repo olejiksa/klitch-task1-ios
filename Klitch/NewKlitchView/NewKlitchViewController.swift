@@ -6,6 +6,7 @@
 //  Copyright © 2021 Sberbank. All rights reserved.
 //
 
+import Firebase
 import UIKit
 
 final class NewKlitchViewController: UIViewController {
@@ -19,6 +20,9 @@ final class NewKlitchViewController: UIViewController {
 
 	private var imagePicker: ImagePicker?
 	private let klitchType: KlitchType
+	private var firestore: Firestore?
+
+	private var user: User? { Auth.auth().currentUser }
 
 	init(klitchType: KlitchType) {
 		self.klitchType = klitchType
@@ -55,6 +59,8 @@ final class NewKlitchViewController: UIViewController {
 	}
 
 	private func setupData() {
+		firestore = Firestore.firestore()
+
 		switch klitchType {
 		case .community, .project:
 			getHelpLabel.text = "Расскажи, что умеешь"
@@ -73,6 +79,14 @@ final class NewKlitchViewController: UIViewController {
 	}
 
 	@IBAction private func didCreateKlitch() {
+		guard let getHelp = getHelpField.text, let giveHelp = giveHelpField.text else { return }
+
+		_ = firestore?.collection("klitches").addDocument(data: [
+			"getHelp": getHelp,
+			"giveHelp": giveHelp,
+			"type": klitchType.rawValue
+		])
+
 		let alert = AlertHelper.success("Клич успешно создан!") {
 			self.navigationController?.popViewController(animated: true)
 		}

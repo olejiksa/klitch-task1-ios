@@ -14,31 +14,45 @@ final class ProfileViewController: UIViewController {
 	@IBOutlet private weak var emailLabel: UILabel!
 	@IBOutlet private weak var nameField: UITextField!
 	@IBOutlet private weak var descriptionField: UITextField!
+	@IBOutlet private weak var saveButton: LoadingButton!
 
-	private let user: User
-
-	init(user: User) {
-		self.user = user
-		super.init(nibName: nil, bundle: nil)
-	}
-
-	required init?(coder: NSCoder) {
-		fatalError("init(coder:) has not been implemented")
-	}
+	private var user: User? { Auth.auth().currentUser }
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         title = "Профиль"
-		let text = emailLabel.text ?? ""
-		emailLabel.text = "\(text) \(user.email ?? "")"
+		emailLabel.text = "\(emailLabel.text ?? "") \(user?.email ?? "")"
+
+		setData()
     }
 
 	@IBAction private func save() {
-		let alert = AlertHelper.success("Профиль успешно обновлен!") {
-			self.navigationController?.popViewController(animated: true)
-		}
+		saveButton.showLoading()
 
-		present(alert, animated: true)
+		let request = user?.createProfileChangeRequest()
+		request?.displayName = nameField.text
+		request?.commitChanges { [weak self] error in
+			guard let self = self else { return }
+
+			self.saveButton.hideLoading()
+
+			let alert: UIAlertController
+			if let error = error {
+				alert = AlertHelper.error(error.localizedDescription)
+			} else {
+				alert = AlertHelper.success("Профиль успешно обновлен!") {
+					self.navigationController?.popViewController(animated: true)
+				}
+
+				self.setData()
+			}
+
+			self.present(alert, animated: true)
+		}
+	}
+
+	private func setData() {
+		nameField.text = user?.displayName
 	}
 }

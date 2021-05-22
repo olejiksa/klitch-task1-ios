@@ -12,6 +12,7 @@
                 <outlet property="descriptionField" destination="ha8-HH-rqx" id="jWf-1B-r8A"/>
                 <outlet property="emailLabel" destination="r7m-34-Biv" id="ou9-6z-LpV"/>
                 <outlet property="nameField" destination="2wN-pK-D5e" id="0mS-vh-BMy"/>
+                <outlet property="saveButton" destination="TRs-eZ-SpP" id="try-o3-Vir"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>

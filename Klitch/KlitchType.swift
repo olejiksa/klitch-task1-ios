@@ -8,9 +8,18 @@
 
 import Foundation
 
-enum KlitchType: Int {
+enum KlitchType: String, Codable {
 	case community
 	case help
 	case project
 	case neighbor
+
+	init(number: Int) {
+		switch number {
+		case 1: self = .help
+		case 2: self = .project
+		case 3: self = .neighbor
+		default: self = .community
+		}
+	}
 }

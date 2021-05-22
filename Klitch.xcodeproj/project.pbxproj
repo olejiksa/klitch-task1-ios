@@ -29,6 +29,7 @@
 		DA183D862659701200C79B52 /* ChatsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA183D842659701200C79B52 /* ChatsListViewController.swift */; };
 		DA183D872659701200C79B52 /* ChatsListView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DA183D852659701200C79B52 /* ChatsListView.xib */; };
 		DA183D8B26597BC400C79B52 /* KlitchModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA183D8A26597BC400C79B52 /* KlitchModel.swift */; };
+		DA183D8E26598AF400C79B52 /* ProfileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA183D8D26598AF400C79B52 /* ProfileModel.swift */; };
 		DAE2583E2658ED1600D0B836 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE2583D2658ED1600D0B836 /* AppDelegate.swift */; };
 		DAE258402658ED1600D0B836 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE2583F2658ED1600D0B836 /* SceneDelegate.swift */; };
 		DAE258472658ED1800D0B836 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DAE258462658ED1800D0B836 /* Assets.xcassets */; };
@@ -60,6 +61,7 @@
 		DA183D842659701200C79B52 /* ChatsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatsListViewController.swift; sourceTree = "<group>"; };
 		DA183D852659701200C79B52 /* ChatsListView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChatsListView.xib; sourceTree = "<group>"; };
 		DA183D8A26597BC400C79B52 /* KlitchModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KlitchModel.swift; sourceTree = "<group>"; };
+		DA183D8D26598AF400C79B52 /* ProfileModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileModel.swift; sourceTree = "<group>"; };
 		DAE2583A2658ED1600D0B836 /* Klitch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Klitch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAE2583D2658ED1600D0B836 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DAE2583F2658ED1600D0B836 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -211,6 +213,7 @@
 				DAE2584B2658ED1800D0B836 /* Info.plist */,
 				DA183D6C26594CA500C79B52 /* KlitchType.swift */,
 				DA183D8A26597BC400C79B52 /* KlitchModel.swift */,
+				DA183D8D26598AF400C79B52 /* ProfileModel.swift */,
 			);
 			path = Klitch;
 			sourceTree = "<group>";
@@ -352,6 +355,7 @@
 				DA183D7326595CB300C79B52 /* KlitchDetailViewController.swift in Sources */,
 				DA183D862659701200C79B52 /* ChatsListViewController.swift in Sources */,
 				DA183D522658F7CB00C79B52 /* MainViewController.swift in Sources */,
+				DA183D8E26598AF400C79B52 /* ProfileModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

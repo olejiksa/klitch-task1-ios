@@ -9,6 +9,8 @@ target 'Klitch' do
 	# For example, to use Firebase Authentication and Cloud Firestore
 	pod 'Firebase/Auth'
 	pod 'Firebase/Firestore'
+	pod 'Firebase/Core'
+	pod 'Firebase/Database'
 end
 
 platform :ios, '10.0'
