@@ -52,6 +52,8 @@ final class SignUpViewController: UIViewController {
 			} else if let authResult = authResult {
 				let vc = MainViewController(user: authResult.user)
 				self.clearBackStack(with: vc)
+				let keyedUser = try? NSKeyedArchiver.archivedData(withRootObject: authResult.user, requiringSecureCoding: false)
+				UserDefaults.standard.setValue(keyedUser, forKey: "user")
 			}
 		}
 	}

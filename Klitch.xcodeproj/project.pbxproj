@@ -16,6 +16,10 @@
 		DA183D532658F7CB00C79B52 /* MainView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DA183D512658F7CB00C79B52 /* MainView.xib */; };
 		DA183D59265900B500C79B52 /* AlertHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA183D58265900B500C79B52 /* AlertHelper.swift */; };
 		DA183D5D26590A8800C79B52 /* LoadingButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA183D5C26590A8800C79B52 /* LoadingButton.swift */; };
+		DA183D63265912A600C79B52 /* NewKlitchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA183D61265912A600C79B52 /* NewKlitchViewController.swift */; };
+		DA183D64265912A600C79B52 /* NewKlitchView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DA183D62265912A600C79B52 /* NewKlitchView.xib */; };
+		DA183D6926593CC300C79B52 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA183D6826593CC300C79B52 /* ImagePicker.swift */; };
+		DA183D6D26594CA500C79B52 /* KlitchType.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA183D6C26594CA500C79B52 /* KlitchType.swift */; };
 		DAE2583E2658ED1600D0B836 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE2583D2658ED1600D0B836 /* AppDelegate.swift */; };
 		DAE258402658ED1600D0B836 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE2583F2658ED1600D0B836 /* SceneDelegate.swift */; };
 		DAE258472658ED1800D0B836 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DAE258462658ED1800D0B836 /* Assets.xcassets */; };
@@ -34,6 +38,10 @@
 		DA183D512658F7CB00C79B52 /* MainView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainView.xib; sourceTree = "<group>"; };
 		DA183D58265900B500C79B52 /* AlertHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertHelper.swift; sourceTree = "<group>"; };
 		DA183D5C26590A8800C79B52 /* LoadingButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingButton.swift; sourceTree = "<group>"; };
+		DA183D61265912A600C79B52 /* NewKlitchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewKlitchViewController.swift; sourceTree = "<group>"; };
+		DA183D62265912A600C79B52 /* NewKlitchView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewKlitchView.xib; sourceTree = "<group>"; };
+		DA183D6826593CC300C79B52 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		DA183D6C26594CA500C79B52 /* KlitchType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KlitchType.swift; sourceTree = "<group>"; };
 		DAE2583A2658ED1600D0B836 /* Klitch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Klitch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAE2583D2658ED1600D0B836 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DAE2583F2658ED1600D0B836 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -100,6 +108,15 @@
 			path = MainView;
 			sourceTree = "<group>";
 		};
+		DA183D602659126800C79B52 /* NewKlitchView */ = {
+			isa = PBXGroup;
+			children = (
+				DA183D61265912A600C79B52 /* NewKlitchViewController.swift */,
+				DA183D62265912A600C79B52 /* NewKlitchView.xib */,
+			);
+			path = NewKlitchView;
+			sourceTree = "<group>";
+		};
 		DAE258312658ED1600D0B836 = {
 			isa = PBXGroup;
 			children = (
@@ -124,14 +141,17 @@
 			children = (
 				DA183D58265900B500C79B52 /* AlertHelper.swift */,
 				DA183D5C26590A8800C79B52 /* LoadingButton.swift */,
+				DA183D6826593CC300C79B52 /* ImagePicker.swift */,
 				DA183D4F2658F7BE00C79B52 /* MainView */,
 				DA183D482658F7A400C79B52 /* SignUpView */,
 				DA183D3B2658F76000C79B52 /* AuthView */,
+				DA183D602659126800C79B52 /* NewKlitchView */,
 				DAE2583D2658ED1600D0B836 /* AppDelegate.swift */,
 				DAE2583F2658ED1600D0B836 /* SceneDelegate.swift */,
 				DAE258462658ED1800D0B836 /* Assets.xcassets */,
 				DAE258482658ED1800D0B836 /* LaunchScreen.storyboard */,
 				DAE2584B2658ED1800D0B836 /* Info.plist */,
+				DA183D6C26594CA500C79B52 /* KlitchType.swift */,
 			);
 			path = Klitch;
 			sourceTree = "<group>";
@@ -200,6 +220,7 @@
 				DA183D462658F79D00C79B52 /* AuthView.xib in Resources */,
 				DAE2584A2658ED1800D0B836 /* LaunchScreen.storyboard in Resources */,
 				DAE258572658EF0800D0B836 /* GoogleService-Info.plist in Resources */,
+				DA183D64265912A600C79B52 /* NewKlitchView.xib in Resources */,
 				DAE258472658ED1800D0B836 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -253,8 +274,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA183D63265912A600C79B52 /* NewKlitchViewController.swift in Sources */,
 				DA183D59265900B500C79B52 /* AlertHelper.swift in Sources */,
 				DA183D5D26590A8800C79B52 /* LoadingButton.swift in Sources */,
+				DA183D6926593CC300C79B52 /* ImagePicker.swift in Sources */,
+				DA183D6D26594CA500C79B52 /* KlitchType.swift in Sources */,
 				DAE2583E2658ED1600D0B836 /* AppDelegate.swift in Sources */,
 				DA183D452658F79D00C79B52 /* AuthViewController.swift in Sources */,
 				DA183D4B2658F7B600C79B52 /* SignUpViewController.swift in Sources */,

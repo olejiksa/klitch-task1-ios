@@ -27,7 +27,7 @@ final class MainViewController: UIViewController {
 	override func viewDidLoad() {
         super.viewDidLoad()
 
-        title = "Статус"
+        title = "Меню"
 		let text = statusLabel.text ?? ""
 		statusLabel.text = "\(text) \(user.email ?? "")"
 		navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Выйти",
@@ -47,5 +47,11 @@ final class MainViewController: UIViewController {
 			window.rootViewController = nvc
 			nvc.popToRootViewController(animated: false)
 		}
+	}
+
+	@IBAction private func didAsk(_ sender: UIButton) {
+		let klitchType = KlitchType(rawValue: sender.tag)
+		let vc = klitchType.map(NewKlitchViewController.init)
+		vc.map { navigationController?.pushViewController($0, animated: true) }
 	}
 }

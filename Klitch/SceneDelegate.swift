@@ -6,6 +6,7 @@
 //  Copyright © 2021 Sberbank. All rights reserved.
 //
 
+import Firebase
 import UIKit
 
 final class SceneDelegate: UIResponder, UIWindowSceneDelegate {
@@ -21,7 +22,16 @@ final class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 		UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
 
 		window = UIWindow(windowScene: windowScene)
-		let vc = AuthViewController()
+
+		let vc: UIViewController
+		let keyedUser = UserDefaults.standard.value(forKey: "user") as? Data
+		let user = keyedUser.map { try? NSKeyedUnarchiver.unarchivedObject(ofClasses: [User.self], from: $0) } as? User
+		if let user = user {
+			vc = MainViewController(user: user)
+		} else {
+			vc = AuthViewController()
+		}
+
 		let nvc = UINavigationController(rootViewController: vc)
 		window?.rootViewController = nvc
 		window?.makeKeyAndVisible()
