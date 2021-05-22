@@ -79,7 +79,7 @@
                                 <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </state>
                             <connections>
-                                <action selector="didAsk:" destination="-1" eventType="touchUpInside" id="iP8-t9-5y7"/>
+                                <action selector="didSuggestHelp:" destination="-1" eventType="touchUpInside" id="555-2I-h6S"/>
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7fM-CJ-Bxb" customClass="LoadingButton" customModule="Klitch" customModuleProvider="target">
@@ -89,7 +89,7 @@
                                 <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </state>
                             <connections>
-                                <action selector="didAsk:" destination="-1" eventType="touchUpInside" id="V5N-rJ-EdB"/>
+                                <action selector="didSuggestHelp:" destination="-1" eventType="touchUpInside" id="Zqo-p4-StS"/>
                             </connections>
                         </button>
                         <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2pT-Np-pEV" userLabel="Поиск помощи" customClass="LoadingButton" customModule="Klitch" customModuleProvider="target">
@@ -99,7 +99,7 @@
                                 <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </state>
                             <connections>
-                                <action selector="didAsk:" destination="-1" eventType="touchUpInside" id="e8I-aI-F9Q"/>
+                                <action selector="didSuggestHelp:" destination="-1" eventType="touchUpInside" id="ovx-OR-OAZ"/>
                             </connections>
                         </button>
                         <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AVR-0S-9FB" userLabel="Поиск соседа" customClass="LoadingButton" customModule="Klitch" customModuleProvider="target">
@@ -109,7 +109,7 @@
                                 <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </state>
                             <connections>
-                                <action selector="didAsk:" destination="-1" eventType="touchUpInside" id="PKt-gf-umP"/>
+                                <action selector="didSuggestHelp:" destination="-1" eventType="touchUpInside" id="KI8-HJ-u6B"/>
                             </connections>
                         </button>
                     </subviews>

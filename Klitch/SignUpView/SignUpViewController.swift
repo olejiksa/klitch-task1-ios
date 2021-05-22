@@ -34,7 +34,7 @@ final class SignUpViewController: UIViewController {
 			  let repeatPassword = repeatPasswordField.text else { return }
 
 		guard password == repeatPassword else {
-			let alert = AlertHelper.alert("Пароли должны совпадать")
+			let alert = AlertHelper.error("Пароли должны совпадать")
 			present(alert, animated: true)
 			return
 		}
@@ -47,7 +47,7 @@ final class SignUpViewController: UIViewController {
 			self.signUpButton.hideLoading()
 
 			if let error = error {
-				let alert = AlertHelper.alert(error.localizedDescription)
+				let alert = AlertHelper.error(error.localizedDescription)
 				self.present(alert, animated: true)
 			} else if let authResult = authResult {
 				let vc = MainViewController(user: authResult.user)

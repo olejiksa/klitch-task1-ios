@@ -41,7 +41,7 @@ final class NewKlitchViewController: UIViewController {
 	}
 
 	private func setupUI() {
-		title = "Клич"
+		title = "Новый клич"
 
 		placeholderView.contentMode = .scaleAspectFill
 		placeholderView.clipsToBounds = true

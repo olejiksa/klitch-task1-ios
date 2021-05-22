@@ -43,7 +43,7 @@ final class AuthViewController: UIViewController {
 			self.logInButton.hideLoading()
 
 			if let error = error {
-				let alert = AlertHelper.alert(error.localizedDescription)
+				let alert = AlertHelper.error(error.localizedDescription)
 				self.present(alert, animated: true)
 			} else if let authResult = authResult {
 				let vc = MainViewController(user: authResult.user)

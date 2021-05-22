@@ -21,6 +21,10 @@ final class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 		UINavigationBar.appearance().barTintColor = #colorLiteral(red: 0.6145308614, green: 0.6974866986, blue: 1, alpha: 1)
 		UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
 
+		UITextField.appearance().layer.borderWidth = 3
+		UITextField.appearance().layer.borderColor = UIColor.black.cgColor
+		UITextField.appearance().backgroundColor = #colorLiteral(red: 0.7099748254, green: 0.8300378919, blue: 0.9915148616, alpha: 1)
+
 		window = UIWindow(windowScene: windowScene)
 
 		let vc: UIViewController

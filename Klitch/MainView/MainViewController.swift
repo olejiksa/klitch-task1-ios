@@ -53,6 +53,12 @@ final class MainViewController: UIViewController {
 		vc.map { navigationController?.pushViewController($0, animated: true) }
 	}
 
+	@IBAction private func didSuggestHelp(_ sender: UIButton) {
+		let klitchType = KlitchType(rawValue: sender.tag)
+		let vc = klitchType.map(KlitchDetailViewController.init)
+		vc.map { navigationController?.pushViewController($0, animated: true) }
+	}
+
 	private func setupData() {
 		title = "Меню"
 	}
