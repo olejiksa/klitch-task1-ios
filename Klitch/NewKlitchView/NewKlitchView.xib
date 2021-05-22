@@ -135,7 +135,7 @@
                                 <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </state>
                             <connections>
-                                <action selector="didPickerTap:" destination="-1" eventType="touchUpInside" id="g7j-GC-WBQ"/>
+                                <action selector="didCreateKlitch" destination="-1" eventType="touchUpInside" id="C40-qa-9m9"/>
                             </connections>
                         </button>
                     </subviews>

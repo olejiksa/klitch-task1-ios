@@ -39,6 +39,11 @@ final class MainViewController: UIViewController {
 		navigationController?.pushViewController(vc, animated: true)
 	}
 
+	@objc private func didChatListTap() {
+		let vc = ChatsListViewController()
+		navigationController?.pushViewController(vc, animated: true)
+	}
+
 	private func clearBackStack(with viewController: UIViewController) {
 		if let window = UIApplication.shared.windows.first {
 			let nvc = UINavigationController(rootViewController: viewController)
@@ -54,9 +59,29 @@ final class MainViewController: UIViewController {
 	}
 
 	@IBAction private func didSuggestHelp(_ sender: UIButton) {
-		let klitchType = KlitchType(rawValue: sender.tag)
-		let vc = klitchType.map(KlitchDetailViewController.init)
-		vc.map { navigationController?.pushViewController($0, animated: true) }
+		let klitchType = KlitchType(rawValue: sender.tag) ?? .community
+		let klitches: [KlitchModel] = [.init(name: "Интернет-журнал",
+											 description: "Университетский интернет-журнал",
+											 getHelp: "Нам нужны люди настоящего писательского мастерства",
+											 giveHelp: "Станешь частью большой команды",
+											 type: klitchType),
+									   .init(name: "Помощь с покупками",
+											 description: "Человек с ограниченными возможностями",
+											 getHelp: "Я маломобилен",
+											 giveHelp: "Удовлетворенность от выполненного дела",
+											 type: klitchType),
+									   .init(name: "Проект разработки Telegram-бота",
+											 description: "Университетский интернет-журнал",
+											 getHelp: "Нам нужны в команду разработчики",
+											 giveHelp: "Станешь частью большой команды",
+											 type: klitchType),
+									   .init(name: "Лиза, 24",
+											 description: "Магистрантка 2 курса",
+											 getHelp: "Ищу соседку",
+											 giveHelp: "nil",
+											 type: klitchType)]
+		let vc = KlitchDetailViewController(klitches: klitches)
+		navigationController?.pushViewController(vc, animated: true)
 	}
 
 	private func setupData() {
@@ -64,10 +89,14 @@ final class MainViewController: UIViewController {
 	}
 
 	private func setupNavigationBarButtons() {
-		navigationItem.leftBarButtonItem = .init(image: UIImage(systemName: "person.crop.circle.fill"),
-												 style: .plain,
-												 target: self,
-												 action: #selector(didProfileTap))
+		navigationItem.leftBarButtonItems = [.init(image: UIImage(systemName: "person.crop.circle.fill"),
+												   style: .plain,
+												   target: self,
+												   action: #selector(didProfileTap)),
+											 .init(title: "Чаты",
+												   style: .plain,
+												   target: self,
+												   action: #selector(didChatListTap))]
 		navigationItem.rightBarButtonItem = .init(title: "Выйти",
 												  style: .plain,
 												  target: self,

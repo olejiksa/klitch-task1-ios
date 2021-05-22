@@ -67,9 +67,17 @@ final class NewKlitchViewController: UIViewController {
 			giveHelpField.isHidden = true
 		case .neighbor:
 			getHelpLabel.text = "Расскажи о себе"
-			giveHelpLabel.isHidden = false
-			giveHelpField.isHidden = false
+			giveHelpLabel.isHidden = true
+			giveHelpField.isHidden = true
 		}
+	}
+
+	@IBAction private func didCreateKlitch() {
+		let alert = AlertHelper.success("Клич успешно создан!") {
+			self.navigationController?.popViewController(animated: true)
+		}
+		
+		present(alert, animated: true)
 	}
 }
 

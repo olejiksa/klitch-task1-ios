@@ -16,6 +16,12 @@ final class AlertHelper {
 		return alert
 	}
 
+	static func success(_ message: String, successHandler: @escaping () -> Void) -> UIAlertController {
+		let alert = UIAlertController(title: "Успех", message: message, preferredStyle: .alert)
+		alert.addAction(.init(title: "ОК", style: .default, handler: { _ in successHandler() }))
+		return alert
+	}
+
 	static func match(_ message: String, connectHandler: @escaping () -> Void) -> UIAlertController {
 		let alert = UIAlertController(title: "Совпадение", message: message, preferredStyle: .alert)
 		alert.addAction(.init(title: "Связаться", style: .default) { _ in connectHandler() })

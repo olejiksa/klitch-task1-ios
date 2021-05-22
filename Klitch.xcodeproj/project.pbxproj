@@ -24,6 +24,11 @@
 		DA183D7426595CB300C79B52 /* KlitchDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DA183D7226595CB300C79B52 /* KlitchDetailView.xib */; };
 		DA183D7826595CD100C79B52 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA183D7626595CD100C79B52 /* ProfileViewController.swift */; };
 		DA183D7926595CD100C79B52 /* ProfileView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DA183D7726595CD100C79B52 /* ProfileView.xib */; };
+		DA183D8026596D5D00C79B52 /* ChatDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA183D7E26596D5D00C79B52 /* ChatDetailViewController.swift */; };
+		DA183D8126596D5D00C79B52 /* ChatDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DA183D7F26596D5D00C79B52 /* ChatDetailView.xib */; };
+		DA183D862659701200C79B52 /* ChatsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA183D842659701200C79B52 /* ChatsListViewController.swift */; };
+		DA183D872659701200C79B52 /* ChatsListView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DA183D852659701200C79B52 /* ChatsListView.xib */; };
+		DA183D8B26597BC400C79B52 /* KlitchModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA183D8A26597BC400C79B52 /* KlitchModel.swift */; };
 		DAE2583E2658ED1600D0B836 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE2583D2658ED1600D0B836 /* AppDelegate.swift */; };
 		DAE258402658ED1600D0B836 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE2583F2658ED1600D0B836 /* SceneDelegate.swift */; };
 		DAE258472658ED1800D0B836 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DAE258462658ED1800D0B836 /* Assets.xcassets */; };
@@ -50,6 +55,11 @@
 		DA183D7226595CB300C79B52 /* KlitchDetailView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KlitchDetailView.xib; sourceTree = "<group>"; };
 		DA183D7626595CD100C79B52 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		DA183D7726595CD100C79B52 /* ProfileView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileView.xib; sourceTree = "<group>"; };
+		DA183D7E26596D5D00C79B52 /* ChatDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatDetailViewController.swift; sourceTree = "<group>"; };
+		DA183D7F26596D5D00C79B52 /* ChatDetailView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChatDetailView.xib; sourceTree = "<group>"; };
+		DA183D842659701200C79B52 /* ChatsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatsListViewController.swift; sourceTree = "<group>"; };
+		DA183D852659701200C79B52 /* ChatsListView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChatsListView.xib; sourceTree = "<group>"; };
+		DA183D8A26597BC400C79B52 /* KlitchModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KlitchModel.swift; sourceTree = "<group>"; };
 		DAE2583A2658ED1600D0B836 /* Klitch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Klitch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAE2583D2658ED1600D0B836 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DAE2583F2658ED1600D0B836 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -143,6 +153,24 @@
 			path = ProfileView;
 			sourceTree = "<group>";
 		};
+		DA183D7C26596D0A00C79B52 /* ChatsListView */ = {
+			isa = PBXGroup;
+			children = (
+				DA183D842659701200C79B52 /* ChatsListViewController.swift */,
+				DA183D852659701200C79B52 /* ChatsListView.xib */,
+			);
+			path = ChatsListView;
+			sourceTree = "<group>";
+		};
+		DA183D7D26596D1B00C79B52 /* ChatDetailView */ = {
+			isa = PBXGroup;
+			children = (
+				DA183D7E26596D5D00C79B52 /* ChatDetailViewController.swift */,
+				DA183D7F26596D5D00C79B52 /* ChatDetailView.xib */,
+			);
+			path = ChatDetailView;
+			sourceTree = "<group>";
+		};
 		DAE258312658ED1600D0B836 = {
 			isa = PBXGroup;
 			children = (
@@ -174,12 +202,15 @@
 				DA183D602659126800C79B52 /* NewKlitchView */,
 				DA183D6F26595C8C00C79B52 /* KlitchDetailView */,
 				DA183D7026595C9500C79B52 /* ProfileView */,
+				DA183D7C26596D0A00C79B52 /* ChatsListView */,
+				DA183D7D26596D1B00C79B52 /* ChatDetailView */,
 				DAE2583D2658ED1600D0B836 /* AppDelegate.swift */,
 				DAE2583F2658ED1600D0B836 /* SceneDelegate.swift */,
 				DAE258462658ED1800D0B836 /* Assets.xcassets */,
 				DAE258482658ED1800D0B836 /* LaunchScreen.storyboard */,
 				DAE2584B2658ED1800D0B836 /* Info.plist */,
 				DA183D6C26594CA500C79B52 /* KlitchType.swift */,
+				DA183D8A26597BC400C79B52 /* KlitchModel.swift */,
 			);
 			path = Klitch;
 			sourceTree = "<group>";
@@ -248,7 +279,9 @@
 				DA183D4C2658F7B600C79B52 /* SignUpView.xib in Resources */,
 				DA183D532658F7CB00C79B52 /* MainView.xib in Resources */,
 				DA183D462658F79D00C79B52 /* AuthView.xib in Resources */,
+				DA183D8126596D5D00C79B52 /* ChatDetailView.xib in Resources */,
 				DAE2584A2658ED1800D0B836 /* LaunchScreen.storyboard in Resources */,
+				DA183D872659701200C79B52 /* ChatsListView.xib in Resources */,
 				DAE258572658EF0800D0B836 /* GoogleService-Info.plist in Resources */,
 				DA183D64265912A600C79B52 /* NewKlitchView.xib in Resources */,
 				DAE258472658ED1800D0B836 /* Assets.xcassets in Resources */,
@@ -307,14 +340,17 @@
 				DA183D63265912A600C79B52 /* NewKlitchViewController.swift in Sources */,
 				DA183D59265900B500C79B52 /* AlertHelper.swift in Sources */,
 				DA183D5D26590A8800C79B52 /* LoadingButton.swift in Sources */,
+				DA183D8026596D5D00C79B52 /* ChatDetailViewController.swift in Sources */,
 				DA183D6926593CC300C79B52 /* ImagePicker.swift in Sources */,
 				DA183D6D26594CA500C79B52 /* KlitchType.swift in Sources */,
 				DAE2583E2658ED1600D0B836 /* AppDelegate.swift in Sources */,
 				DA183D7826595CD100C79B52 /* ProfileViewController.swift in Sources */,
+				DA183D8B26597BC400C79B52 /* KlitchModel.swift in Sources */,
 				DA183D452658F79D00C79B52 /* AuthViewController.swift in Sources */,
 				DA183D4B2658F7B600C79B52 /* SignUpViewController.swift in Sources */,
 				DAE258402658ED1600D0B836 /* SceneDelegate.swift in Sources */,
 				DA183D7326595CB300C79B52 /* KlitchDetailViewController.swift in Sources */,
+				DA183D862659701200C79B52 /* ChatsListViewController.swift in Sources */,
 				DA183D522658F7CB00C79B52 /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

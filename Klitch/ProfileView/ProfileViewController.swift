@@ -35,6 +35,10 @@ final class ProfileViewController: UIViewController {
     }
 
 	@IBAction private func save() {
-		
+		let alert = AlertHelper.success("Профиль успешно обновлен!") {
+			self.navigationController?.popViewController(animated: true)
+		}
+
+		present(alert, animated: true)
 	}
 }
