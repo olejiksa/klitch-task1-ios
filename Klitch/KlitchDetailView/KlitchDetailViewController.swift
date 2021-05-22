@@ -93,8 +93,11 @@ final class KlitchDetailViewController: UIViewController {
 			message = "Вы можете стать частью команды!"
 		}
 
-		let alert = AlertHelper.match(message, connectHandler: didConnect)
-		present(alert, animated: true)
+		// TODO: доработать логику
+		if Bool.random() {
+			let alert = AlertHelper.match(message, connectHandler: didConnect)
+			present(alert, animated: true)
+		}
 	}
 
 	private func setData() {
