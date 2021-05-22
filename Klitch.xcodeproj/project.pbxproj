@@ -3,27 +3,45 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B9C4AFCB8B49214957100E9D /* libPods-Klitch.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2427AC7E7B92042FBAC71A83 /* libPods-Klitch.a */; };
+		DA183D452658F79D00C79B52 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA183D432658F79D00C79B52 /* AuthViewController.swift */; };
+		DA183D462658F79D00C79B52 /* AuthView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DA183D442658F79D00C79B52 /* AuthView.xib */; };
+		DA183D4B2658F7B600C79B52 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA183D492658F7B600C79B52 /* SignUpViewController.swift */; };
+		DA183D4C2658F7B600C79B52 /* SignUpView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DA183D4A2658F7B600C79B52 /* SignUpView.xib */; };
+		DA183D522658F7CB00C79B52 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA183D502658F7CB00C79B52 /* MainViewController.swift */; };
+		DA183D532658F7CB00C79B52 /* MainView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DA183D512658F7CB00C79B52 /* MainView.xib */; };
+		DA183D59265900B500C79B52 /* AlertHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA183D58265900B500C79B52 /* AlertHelper.swift */; };
+		DA183D5D26590A8800C79B52 /* LoadingButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA183D5C26590A8800C79B52 /* LoadingButton.swift */; };
 		DAE2583E2658ED1600D0B836 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE2583D2658ED1600D0B836 /* AppDelegate.swift */; };
 		DAE258402658ED1600D0B836 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE2583F2658ED1600D0B836 /* SceneDelegate.swift */; };
-		DAE258422658ED1600D0B836 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE258412658ED1600D0B836 /* ViewController.swift */; };
-		DAE258452658ED1700D0B836 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAE258432658ED1700D0B836 /* Main.storyboard */; };
 		DAE258472658ED1800D0B836 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DAE258462658ED1800D0B836 /* Assets.xcassets */; };
 		DAE2584A2658ED1800D0B836 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAE258482658ED1800D0B836 /* LaunchScreen.storyboard */; };
+		DAE258572658EF0800D0B836 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DAE258562658EF0800D0B836 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2427AC7E7B92042FBAC71A83 /* libPods-Klitch.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Klitch.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		63BF0C6E1E4C9FEA73A4FB7D /* Pods-Klitch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Klitch.release.xcconfig"; path = "Target Support Files/Pods-Klitch/Pods-Klitch.release.xcconfig"; sourceTree = "<group>"; };
+		DA183D432658F79D00C79B52 /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
+		DA183D442658F79D00C79B52 /* AuthView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AuthView.xib; sourceTree = "<group>"; };
+		DA183D492658F7B600C79B52 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		DA183D4A2658F7B600C79B52 /* SignUpView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignUpView.xib; sourceTree = "<group>"; };
+		DA183D502658F7CB00C79B52 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		DA183D512658F7CB00C79B52 /* MainView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainView.xib; sourceTree = "<group>"; };
+		DA183D58265900B500C79B52 /* AlertHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertHelper.swift; sourceTree = "<group>"; };
+		DA183D5C26590A8800C79B52 /* LoadingButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingButton.swift; sourceTree = "<group>"; };
 		DAE2583A2658ED1600D0B836 /* Klitch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Klitch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAE2583D2658ED1600D0B836 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DAE2583F2658ED1600D0B836 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		DAE258412658ED1600D0B836 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		DAE258442658ED1700D0B836 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DAE258462658ED1800D0B836 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DAE258492658ED1800D0B836 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DAE2584B2658ED1800D0B836 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DAE258562658EF0800D0B836 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		E5C84B3BD2B4408395FCAE9F /* Pods-Klitch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Klitch.debug.xcconfig"; path = "Target Support Files/Pods-Klitch/Pods-Klitch.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +49,65 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B9C4AFCB8B49214957100E9D /* libPods-Klitch.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3952329784FCD723AD8E6B0B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E5C84B3BD2B4408395FCAE9F /* Pods-Klitch.debug.xcconfig */,
+				63BF0C6E1E4C9FEA73A4FB7D /* Pods-Klitch.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		750B015E56D928DA67D8F2C2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2427AC7E7B92042FBAC71A83 /* libPods-Klitch.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DA183D3B2658F76000C79B52 /* AuthView */ = {
+			isa = PBXGroup;
+			children = (
+				DA183D432658F79D00C79B52 /* AuthViewController.swift */,
+				DA183D442658F79D00C79B52 /* AuthView.xib */,
+			);
+			path = AuthView;
+			sourceTree = "<group>";
+		};
+		DA183D482658F7A400C79B52 /* SignUpView */ = {
+			isa = PBXGroup;
+			children = (
+				DA183D492658F7B600C79B52 /* SignUpViewController.swift */,
+				DA183D4A2658F7B600C79B52 /* SignUpView.xib */,
+			);
+			path = SignUpView;
+			sourceTree = "<group>";
+		};
+		DA183D4F2658F7BE00C79B52 /* MainView */ = {
+			isa = PBXGroup;
+			children = (
+				DA183D502658F7CB00C79B52 /* MainViewController.swift */,
+				DA183D512658F7CB00C79B52 /* MainView.xib */,
+			);
+			path = MainView;
+			sourceTree = "<group>";
+		};
 		DAE258312658ED1600D0B836 = {
 			isa = PBXGroup;
 			children = (
+				DAE258562658EF0800D0B836 /* GoogleService-Info.plist */,
 				DAE2583C2658ED1600D0B836 /* Klitch */,
 				DAE2583B2658ED1600D0B836 /* Products */,
+				3952329784FCD723AD8E6B0B /* Pods */,
+				750B015E56D928DA67D8F2C2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,10 +122,13 @@
 		DAE2583C2658ED1600D0B836 /* Klitch */ = {
 			isa = PBXGroup;
 			children = (
+				DA183D58265900B500C79B52 /* AlertHelper.swift */,
+				DA183D5C26590A8800C79B52 /* LoadingButton.swift */,
+				DA183D4F2658F7BE00C79B52 /* MainView */,
+				DA183D482658F7A400C79B52 /* SignUpView */,
+				DA183D3B2658F76000C79B52 /* AuthView */,
 				DAE2583D2658ED1600D0B836 /* AppDelegate.swift */,
 				DAE2583F2658ED1600D0B836 /* SceneDelegate.swift */,
-				DAE258412658ED1600D0B836 /* ViewController.swift */,
-				DAE258432658ED1700D0B836 /* Main.storyboard */,
 				DAE258462658ED1800D0B836 /* Assets.xcassets */,
 				DAE258482658ED1800D0B836 /* LaunchScreen.storyboard */,
 				DAE2584B2658ED1800D0B836 /* Info.plist */,
@@ -74,9 +143,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DAE2584E2658ED1800D0B836 /* Build configuration list for PBXNativeTarget "Klitch" */;
 			buildPhases = (
+				B5FE61C8D252EF7B7258ACCA /* [CP] Check Pods Manifest.lock */,
 				DAE258362658ED1600D0B836 /* Sources */,
 				DAE258372658ED1600D0B836 /* Frameworks */,
 				DAE258382658ED1600D0B836 /* Resources */,
+				27896849E13661C061E2C301 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -124,36 +195,77 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA183D4C2658F7B600C79B52 /* SignUpView.xib in Resources */,
+				DA183D532658F7CB00C79B52 /* MainView.xib in Resources */,
+				DA183D462658F79D00C79B52 /* AuthView.xib in Resources */,
 				DAE2584A2658ED1800D0B836 /* LaunchScreen.storyboard in Resources */,
+				DAE258572658EF0800D0B836 /* GoogleService-Info.plist in Resources */,
 				DAE258472658ED1800D0B836 /* Assets.xcassets in Resources */,
-				DAE258452658ED1700D0B836 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		27896849E13661C061E2C301 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Klitch/Pods-Klitch-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Klitch/Pods-Klitch-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Klitch/Pods-Klitch-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B5FE61C8D252EF7B7258ACCA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Klitch-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		DAE258362658ED1600D0B836 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DAE258422658ED1600D0B836 /* ViewController.swift in Sources */,
+				DA183D59265900B500C79B52 /* AlertHelper.swift in Sources */,
+				DA183D5D26590A8800C79B52 /* LoadingButton.swift in Sources */,
 				DAE2583E2658ED1600D0B836 /* AppDelegate.swift in Sources */,
+				DA183D452658F79D00C79B52 /* AuthViewController.swift in Sources */,
+				DA183D4B2658F7B600C79B52 /* SignUpViewController.swift in Sources */,
 				DAE258402658ED1600D0B836 /* SceneDelegate.swift in Sources */,
+				DA183D522658F7CB00C79B52 /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		DAE258432658ED1700D0B836 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				DAE258442658ED1700D0B836 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		DAE258482658ED1800D0B836 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -283,10 +395,12 @@
 		};
 		DAE2584F2658ED1800D0B836 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E5C84B3BD2B4408395FCAE9F /* Pods-Klitch.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Q7B95BGYFX;
 				INFOPLIST_FILE = Klitch/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -301,10 +415,12 @@
 		};
 		DAE258502658ED1800D0B836 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 63BF0C6E1E4C9FEA73A4FB7D /* Pods-Klitch.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Q7B95BGYFX;
 				INFOPLIST_FILE = Klitch/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
