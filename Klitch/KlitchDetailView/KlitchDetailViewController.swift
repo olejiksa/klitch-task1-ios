@@ -113,6 +113,7 @@ final class KlitchDetailViewController: UIViewController {
 		giveHelpLabel.isHidden = giveHelpContentLabel.text?.isEmpty == true
 		giveHelpContentLabel.isHidden = giveHelpContentLabel.text?.isEmpty == true
 
+		buttons.forEach { $0.tintColor = .white }
 		for letter in klitch.categories {
 			let digit = Int(String(letter)) ?? -1
 			guard digit >= 0 else { continue }
