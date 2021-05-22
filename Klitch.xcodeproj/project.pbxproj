@@ -20,6 +20,10 @@
 		DA183D64265912A600C79B52 /* NewKlitchView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DA183D62265912A600C79B52 /* NewKlitchView.xib */; };
 		DA183D6926593CC300C79B52 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA183D6826593CC300C79B52 /* ImagePicker.swift */; };
 		DA183D6D26594CA500C79B52 /* KlitchType.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA183D6C26594CA500C79B52 /* KlitchType.swift */; };
+		DA183D7326595CB300C79B52 /* KlitchDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA183D7126595CB300C79B52 /* KlitchDetailViewController.swift */; };
+		DA183D7426595CB300C79B52 /* KlitchDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DA183D7226595CB300C79B52 /* KlitchDetailView.xib */; };
+		DA183D7826595CD100C79B52 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA183D7626595CD100C79B52 /* ProfileViewController.swift */; };
+		DA183D7926595CD100C79B52 /* ProfileView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DA183D7726595CD100C79B52 /* ProfileView.xib */; };
 		DAE2583E2658ED1600D0B836 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE2583D2658ED1600D0B836 /* AppDelegate.swift */; };
 		DAE258402658ED1600D0B836 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE2583F2658ED1600D0B836 /* SceneDelegate.swift */; };
 		DAE258472658ED1800D0B836 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DAE258462658ED1800D0B836 /* Assets.xcassets */; };
@@ -42,6 +46,10 @@
 		DA183D62265912A600C79B52 /* NewKlitchView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewKlitchView.xib; sourceTree = "<group>"; };
 		DA183D6826593CC300C79B52 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		DA183D6C26594CA500C79B52 /* KlitchType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KlitchType.swift; sourceTree = "<group>"; };
+		DA183D7126595CB300C79B52 /* KlitchDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KlitchDetailViewController.swift; sourceTree = "<group>"; };
+		DA183D7226595CB300C79B52 /* KlitchDetailView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KlitchDetailView.xib; sourceTree = "<group>"; };
+		DA183D7626595CD100C79B52 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		DA183D7726595CD100C79B52 /* ProfileView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileView.xib; sourceTree = "<group>"; };
 		DAE2583A2658ED1600D0B836 /* Klitch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Klitch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAE2583D2658ED1600D0B836 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DAE2583F2658ED1600D0B836 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -117,6 +125,24 @@
 			path = NewKlitchView;
 			sourceTree = "<group>";
 		};
+		DA183D6F26595C8C00C79B52 /* KlitchDetailView */ = {
+			isa = PBXGroup;
+			children = (
+				DA183D7126595CB300C79B52 /* KlitchDetailViewController.swift */,
+				DA183D7226595CB300C79B52 /* KlitchDetailView.xib */,
+			);
+			path = KlitchDetailView;
+			sourceTree = "<group>";
+		};
+		DA183D7026595C9500C79B52 /* ProfileView */ = {
+			isa = PBXGroup;
+			children = (
+				DA183D7626595CD100C79B52 /* ProfileViewController.swift */,
+				DA183D7726595CD100C79B52 /* ProfileView.xib */,
+			);
+			path = ProfileView;
+			sourceTree = "<group>";
+		};
 		DAE258312658ED1600D0B836 = {
 			isa = PBXGroup;
 			children = (
@@ -146,6 +172,8 @@
 				DA183D482658F7A400C79B52 /* SignUpView */,
 				DA183D3B2658F76000C79B52 /* AuthView */,
 				DA183D602659126800C79B52 /* NewKlitchView */,
+				DA183D6F26595C8C00C79B52 /* KlitchDetailView */,
+				DA183D7026595C9500C79B52 /* ProfileView */,
 				DAE2583D2658ED1600D0B836 /* AppDelegate.swift */,
 				DAE2583F2658ED1600D0B836 /* SceneDelegate.swift */,
 				DAE258462658ED1800D0B836 /* Assets.xcassets */,
@@ -215,6 +243,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA183D7926595CD100C79B52 /* ProfileView.xib in Resources */,
+				DA183D7426595CB300C79B52 /* KlitchDetailView.xib in Resources */,
 				DA183D4C2658F7B600C79B52 /* SignUpView.xib in Resources */,
 				DA183D532658F7CB00C79B52 /* MainView.xib in Resources */,
 				DA183D462658F79D00C79B52 /* AuthView.xib in Resources */,
@@ -280,9 +310,11 @@
 				DA183D6926593CC300C79B52 /* ImagePicker.swift in Sources */,
 				DA183D6D26594CA500C79B52 /* KlitchType.swift in Sources */,
 				DAE2583E2658ED1600D0B836 /* AppDelegate.swift in Sources */,
+				DA183D7826595CD100C79B52 /* ProfileViewController.swift in Sources */,
 				DA183D452658F79D00C79B52 /* AuthViewController.swift in Sources */,
 				DA183D4B2658F7B600C79B52 /* SignUpViewController.swift in Sources */,
 				DAE258402658ED1600D0B836 /* SceneDelegate.swift in Sources */,
+				DA183D7326595CB300C79B52 /* KlitchDetailViewController.swift in Sources */,
 				DA183D522658F7CB00C79B52 /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

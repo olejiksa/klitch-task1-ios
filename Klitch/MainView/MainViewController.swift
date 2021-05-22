@@ -11,8 +11,6 @@ import UIKit
 
 final class MainViewController: UIViewController {
 
-	@IBOutlet private weak var statusLabel: UILabel!
-
 	private let user: User
 
 	init(user: User) {
@@ -27,18 +25,18 @@ final class MainViewController: UIViewController {
 	override func viewDidLoad() {
         super.viewDidLoad()
 
-        title = "Меню"
-		let text = statusLabel.text ?? ""
-		statusLabel.text = "\(text) \(user.email ?? "")"
-		navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Выйти",
-															style: .plain,
-															target: self,
-															action: #selector(didLogOutTap))
+		setupData()
+        setupNavigationBarButtons()
     }
 
 	@objc private func didLogOutTap() {
 		let vc = AuthViewController()
 		clearBackStack(with: vc)
+	}
+
+	@objc private func didProfileTap() {
+		let vc = ProfileViewController(user: user)
+		navigationController?.pushViewController(vc, animated: true)
 	}
 
 	private func clearBackStack(with viewController: UIViewController) {
@@ -53,5 +51,20 @@ final class MainViewController: UIViewController {
 		let klitchType = KlitchType(rawValue: sender.tag)
 		let vc = klitchType.map(NewKlitchViewController.init)
 		vc.map { navigationController?.pushViewController($0, animated: true) }
+	}
+
+	private func setupData() {
+		title = "Меню"
+	}
+
+	private func setupNavigationBarButtons() {
+		navigationItem.leftBarButtonItem = .init(image: UIImage(systemName: "person.crop.circle.fill"),
+												 style: .plain,
+												 target: self,
+												 action: #selector(didProfileTap))
+		navigationItem.rightBarButtonItem = .init(title: "Выйти",
+												  style: .plain,
+												  target: self,
+												  action: #selector(didLogOutTap))
 	}
 }

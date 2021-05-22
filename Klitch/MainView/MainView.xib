@@ -9,7 +9,6 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainViewController" customModule="Klitch" customModuleProvider="target">
             <connections>
-                <outlet property="statusLabel" destination="iDn-Sa-O9F" id="zUh-qP-afE"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -19,22 +18,16 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="ZTe-wS-xN4">
-                    <rect key="frame" x="20" y="64" width="374" height="574.5"/>
+                    <rect key="frame" x="20" y="64" width="374" height="513.5"/>
                     <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Поздравляем! Вы успешно вошли в систему со следующим email:" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iDn-Sa-O9F">
-                            <rect key="frame" x="0.0" y="0.0" width="374" height="41"/>
-                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
-                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <nil key="highlightedColor"/>
-                        </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Нужен человек для дела? Создай клич!" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Cy-DG-mcG">
-                            <rect key="frame" x="0.0" y="61" width="374" height="20.5"/>
+                            <rect key="frame" x="0.0" y="0.0" width="374" height="20.5"/>
                             <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="egt-gC-A8d" customClass="LoadingButton" customModule="Klitch" customModuleProvider="target">
-                            <rect key="frame" x="0.0" y="101.5" width="374" height="34"/>
+                            <rect key="frame" x="0.0" y="40.5" width="374" height="34"/>
                             <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                             <state key="normal" title="Поиск сообщества">
                                 <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -44,7 +37,7 @@
                             </connections>
                         </button>
                         <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="St8-uM-49S" userLabel="Поиск помощи" customClass="LoadingButton" customModule="Klitch" customModuleProvider="target">
-                            <rect key="frame" x="0.0" y="155.5" width="374" height="34"/>
+                            <rect key="frame" x="0.0" y="94.5" width="374" height="34"/>
                             <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                             <state key="normal" title="Поиск помощи">
                                 <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -54,7 +47,7 @@
                             </connections>
                         </button>
                         <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R1L-kt-yet" userLabel="Поиск проекта" customClass="LoadingButton" customModule="Klitch" customModuleProvider="target">
-                            <rect key="frame" x="0.0" y="209.5" width="374" height="34"/>
+                            <rect key="frame" x="0.0" y="148.5" width="374" height="34"/>
                             <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                             <state key="normal" title="Поиск проекта">
                                 <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -64,7 +57,7 @@
                             </connections>
                         </button>
                         <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HyZ-xn-rlm" userLabel="Поиск соседа" customClass="LoadingButton" customModule="Klitch" customModuleProvider="target">
-                            <rect key="frame" x="0.0" y="263.5" width="374" height="34"/>
+                            <rect key="frame" x="0.0" y="202.5" width="374" height="34"/>
                             <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                             <state key="normal" title="Поиск соседа">
                                 <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -74,13 +67,13 @@
                             </connections>
                         </button>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Нет своего дела, но есть желание и умения — круто! Предложи их другому" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qv2-Le-oK6">
-                            <rect key="frame" x="0.0" y="317.5" width="374" height="41"/>
+                            <rect key="frame" x="0.0" y="256.5" width="374" height="41"/>
                             <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UGG-Tv-Lud" userLabel="Поиск проекта" customClass="LoadingButton" customModule="Klitch" customModuleProvider="target">
-                            <rect key="frame" x="0.0" y="378.5" width="374" height="34"/>
+                            <rect key="frame" x="0.0" y="317.5" width="374" height="34"/>
                             <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                             <state key="normal" title="Поиск проекта">
                                 <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -90,7 +83,7 @@
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7fM-CJ-Bxb" customClass="LoadingButton" customModule="Klitch" customModuleProvider="target">
-                            <rect key="frame" x="0.0" y="432.5" width="374" height="34"/>
+                            <rect key="frame" x="0.0" y="371.5" width="374" height="34"/>
                             <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                             <state key="normal" title="Поиск сообщества">
                                 <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -100,7 +93,7 @@
                             </connections>
                         </button>
                         <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2pT-Np-pEV" userLabel="Поиск помощи" customClass="LoadingButton" customModule="Klitch" customModuleProvider="target">
-                            <rect key="frame" x="0.0" y="486.5" width="374" height="34"/>
+                            <rect key="frame" x="0.0" y="425.5" width="374" height="34"/>
                             <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                             <state key="normal" title="Поиск помощи">
                                 <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -110,7 +103,7 @@
                             </connections>
                         </button>
                         <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AVR-0S-9FB" userLabel="Поиск соседа" customClass="LoadingButton" customModule="Klitch" customModuleProvider="target">
-                            <rect key="frame" x="0.0" y="540.5" width="374" height="34"/>
+                            <rect key="frame" x="0.0" y="479.5" width="374" height="34"/>
                             <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                             <state key="normal" title="Поиск соседа">
                                 <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
